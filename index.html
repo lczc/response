@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<div class="header">
+    <div class="nav-top">
+        <span class="tel col-sx-hide">400-888-88888</span>
+        <ul class="list">
+            <li>登录</li>
+            <li>快速注册</li>
+            <li class="col-sx-hide">关于</li>
+            <li class="col-sx-hide">帮助</li>
+            <li>APP下载</li>
+        </ul>
+    </div>
+    <div class="nav-two">
+        <img src="images/logo@1x.png" class="logo">
+        <ul class="list">
+            <li class="col-`sx-hide">首页</li>
+            <li>理财屏道</li>
+            <li>透支频道</li>
+            <li>新手专区</li>
+            <li>安全保障</li>
+        </ul>
+    </div>
+    <div class="nav-foot">
+        <p>平台累计交易金额<strong>198000</strong>万元</p>
+        <p>过去七日成交金额<strong>1888</strong>万元</p>
+        <p>查看运营报告</p>
+    </div>
+</div>
+<div class="content" style="width:100%;height: 300px; ">
+<div class="owl-carousel owl-theme">
+    <div><img src="images/slide_01_2000x410.jpg"></div>
+    <div><img src="images/slide_03_2000x410.jpg"></div>
+    <div><img src="images/slide_01_2000x410.jpg"></div>
+</div>
+
+</div>
+</body>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+                    items:1
+                }
+        );
+    });
+
+    //响应式加载图片
+
+    var arr=["images/slide_01_640x340.jpg","images/slide_03_640x340.jpg","images/slide_01_640x340.jpg"]
+    var arr2=["images/slide_01_2000x410.jpg","images/slide_03_2000x410.jpg","images/slide_01_2000x410.jpg"]
+    document.onresize=function(){
+        var $content=$(".content")
+        var $img=$(".content img")
+        for(var i=0;i<$img.length;i++){
+        if(window.innerWidth<767){
+                $img[i].src=arr[i];
+            }
+        else if(window.innerWidth>=767){
+            $img[i].src=arr2[i];
+        }
+        }
+    }
+</script>
+</html>

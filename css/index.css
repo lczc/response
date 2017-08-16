@@ -1,0 +1,179 @@
+/*复位样式  在css里面语义化 没什么意义了*/
+li,
+ul,
+p {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-size: 14px;
+}
+/*工具箱*/
+.left-float {
+  float: left;
+}
+.right-float {
+  float: right;
+}
+.clearfixd:after,
+.clearfixd:before {
+  content: "";
+  clear: both;
+}
+.text-center {
+  text-align: center;
+}
+/*index样式*/
+.header {
+  overflow: hidden;
+}
+.header .nav-top {
+  padding: 0px 30px;
+  overflow: hidden;
+  background: #555555;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+.header .nav-top .tel {
+  float: left;
+}
+.header .nav-top .list {
+  float: right;
+}
+.header .nav-top .list li {
+  float: left;
+  padding: 0px 15px;
+}
+.header .nav-two {
+  height: 60px;
+  line-height: 60px;
+  background: #f7f7f7;
+  padding: 0px 20px;
+}
+.header .nav-two .logo {
+  float: left;
+  margin-top: 12px;
+}
+.header .nav-two .list {
+  float: right;
+}
+.header .nav-two .list li {
+  float: left;
+  font-size: 18px;
+  color: #7c7a64;
+  padding: 0px 25px;
+  border-left: 1px solid #e6dfd7;
+}
+.header .nav-foot {
+  height: 55px;
+  background: #7c7364;
+  padding: 0px 40px;
+  line-height: 55px;
+  color: #fff;
+  font-size: 16px;
+}
+.header .nav-foot p:nth-child(1) {
+  float: left;
+}
+.header .nav-foot p:nth-child(2) {
+  float: left;
+  margin-left: 15px;
+}
+.header .nav-foot p:nth-child(3) {
+  float: right;
+}
+.header .nav-foot p strong {
+  background: #f2f1f0;
+  padding: 10px 15px;
+  margin: 0px 8px;
+  border-radius: 5px;
+  color: #ff9a00;
+  box-shadow: 0px 3px 3px #333 inset;
+}
+@media (max-width: 970px) and (min-width: 640px) {
+  .header .nav-two {
+    text-align: center;
+    height: auto;
+    line-height: normal;
+    overflow: hidden;
+    padding: 0;
+  }
+  .header .nav-two .logo {
+    float: none;
+  }
+  .header .nav-two .list {
+    float: none;
+    padding-bottom: 15px;
+  }
+  .header .nav-two .list li {
+    float: none;
+    display: inline-block;
+    border: none;
+  }
+  .header .nav-foot p strong {
+    margin: 0px 8px;
+    border-radius: 5px;
+    color: #ff9a00;
+    padding: 0;
+    box-shadow: none;
+    background: none;
+  }
+}
+@media (max-width: 640px) {
+  .col-sx-hide {
+    display: none;
+  }
+  .clo-sx-show {
+    display: block;
+  }
+  .header .nav-two {
+    text-align: center;
+    height: auto;
+    line-height: normal;
+    overflow: hidden;
+    padding: 0;
+  }
+  .header .nav-two .logo {
+    float: none;
+  }
+  .header .nav-two .list {
+    float: none;
+    padding-bottom: 15px;
+  }
+  .header .nav-two .list li {
+    float: none;
+    display: inline-block;
+    border: none;
+    padding: 0px;
+  }
+  .header .nav-foot {
+    overflow: hidden;
+    height: auto;
+  }
+  .header .nav-foot p {
+    background: #7c7364;
+  }
+  .header .nav-foot p:nth-child(1) {
+    float: none;
+    text-align: center;
+  }
+  .header .nav-foot p:nth-child(2) {
+    float: none;
+    text-align: center;
+  }
+  .header .nav-foot p:nth-child(3) {
+    float: none;
+    text-align: center;
+  }
+  .header .nav-foot p strong {
+    margin: 0px 8px;
+    border-radius: 5px;
+    color: #ff9a00;
+    padding: 0;
+    box-shadow: none;
+    background: none;
+  }
+}
